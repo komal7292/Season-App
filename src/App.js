@@ -1,6 +1,7 @@
 import React from "react";
 import SeasonDisplay from './SeasonDisplay';
 
+
 class App extends React.Component {
   state = {lat: null, err: ''}
   componentDidMount() {
