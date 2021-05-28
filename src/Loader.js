@@ -6,8 +6,9 @@ const Loader = (props) => {
       <div className="ui text loader">{props.message}</div>
     </div>
   );
+  // When we not add message props then byDefault set
   Loader.defultProps = {
-      message: "Loading..........."
-    }
+    message: "Loading...........",
+  };
 };
-export default Loader
+export default Loader;
