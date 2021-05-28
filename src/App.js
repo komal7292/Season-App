@@ -1,5 +1,6 @@
 import React from "react";
 import SeasonDisplay from './SeasonDisplay';
+import Loader from './Loader'
 
 
 class App extends React.Component {
@@ -15,9 +16,13 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat}/>
     }
     if (this.state.err && !this.state.lat) {
-      return <div>Error: {this.state.err}</div>;
+      return(
+        <div>
+          <h2 className='error'>Error: {this.state.err}</h2>
+        </div>
+      ) 
     }
-    return <div>Loading!!!</div>
+    return <div><Loader message="Please accept allow location"/></div>
   }
 }
 export default App;
